@@ -17,5 +17,8 @@
     <modules>
         <module>v-orm-common</module>
         <module>v-orm-generator</module>
+		<module>v-orm-spring</module>
+		<module>v-orm-spring-boot-demo</module>
+		<module>v-orm-spring-boot-starter</module>
     </modules>
 </project>
