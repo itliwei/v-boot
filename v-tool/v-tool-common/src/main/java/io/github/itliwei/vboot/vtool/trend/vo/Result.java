@@ -1,4 +1,4 @@
-package io.github.itliwei.vboot.vtrend.vo;
+package io.github.itliwei.vboot.vtool.trend.vo;
 
 /**
  * @author itliwei

@@ -11,7 +11,9 @@
     <artifactId>v-orm-spring-boot-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>v-orm-spring-boot-starter</name>
-    <description>Demo project for Spring Boot</description>
+    <description>base mybatis my springboot starter </description>
+
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>

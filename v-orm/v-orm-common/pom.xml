@@ -11,7 +11,7 @@
 	<artifactId>v-orm-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>v-orm-common</name>
-	<description>v-orm-common</description>
+	<description>base mybatis orm core </description>
 
 	<dependencies>
 		<dependency>

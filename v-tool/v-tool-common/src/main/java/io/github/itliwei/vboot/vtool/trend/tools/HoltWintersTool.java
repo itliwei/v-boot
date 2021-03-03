@@ -1,9 +1,8 @@
-package io.github.itliwei.vboot.vtrend.tools;
+package io.github.itliwei.vboot.vtool.trend.tools;
 
-import io.github.itliwei.vboot.vtrend.TrendTool;
-import io.github.itliwei.vboot.vtrend.vo.Result;
+import io.github.itliwei.vboot.vtool.trend.TrendTool;
+import io.github.itliwei.vboot.vtool.trend.vo.Result;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

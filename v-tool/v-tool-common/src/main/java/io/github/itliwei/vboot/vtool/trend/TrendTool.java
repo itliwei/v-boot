@@ -1,6 +1,6 @@
-package io.github.itliwei.vboot.vtrend;
+package io.github.itliwei.vboot.vtool.trend;
 
-import io.github.itliwei.vboot.vtrend.vo.Result;
+import io.github.itliwei.vboot.vtool.trend.vo.Result;
 
 import java.util.List;
 
