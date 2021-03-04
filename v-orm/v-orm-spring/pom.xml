@@ -5,21 +5,22 @@
     <parent>
         <groupId>io.github.itliwei.vboot</groupId>
         <artifactId>v-orm</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0-RELEASE</version>
     </parent>
     <groupId>io.github.itliwei.vboot.vorm</groupId>
     <artifactId>v-orm-spring</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <name>v-orm-spring</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
     <dependencies>
         <dependency>
             <groupId>io.github.itliwei.vboot.vorm</groupId>
             <artifactId>v-orm-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

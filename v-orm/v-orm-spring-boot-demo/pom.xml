@@ -3,16 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>io.github.itliwei.vboot</groupId>
+        <artifactId>v-orm</artifactId>
+        <version>1.0.0-RELEASE</version>
     </parent>
     <groupId>io.github.itliwei.vboot.vorm</groupId>
     <artifactId>v-orm-spring-boot-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <name>v-orm-spring-boot-demo</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Demo v-orm for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -35,12 +34,12 @@
         <dependency>
             <groupId>io.github.itliwei.vboot.vorm</groupId>
             <artifactId>v-orm-spring-boot-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>io.github.itliwei.vboot.vorm</groupId>
             <artifactId>v-orm-generator</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -49,6 +48,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

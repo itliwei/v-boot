@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>io.github.itliwei.vboot</groupId>
 		<artifactId>v-orm</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-RELEASE</version>
 	</parent>
 	<groupId>io.github.itliwei.vboot.vorm</groupId>
 	<artifactId>v-orm-common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	<name>v-orm-common</name>
 	<description>base mybatis orm core </description>
 
