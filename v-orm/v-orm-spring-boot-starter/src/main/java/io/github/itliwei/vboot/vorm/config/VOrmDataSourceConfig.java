@@ -5,16 +5,16 @@ import io.github.itliwei.vboot.vorm.orm.VOrmConfig;
 import io.github.itliwei.vboot.vorm.orm.VService;
 import io.github.itliwei.vboot.vorm.orm.mapper.VMapper;
 import io.github.itliwei.vboot.vorm.orm.plugins.SkipInterceptor;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
 import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -23,12 +23,15 @@ import javax.sql.DataSource;
 
 @Configuration
 public class VOrmDataSourceConfig {
+    @Autowired
+    private MybatisProperties properties;
 
     @Bean
     public SqlSessionFactory vormSqlSessionFactory(DataSource druidDataSource) throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(druidDataSource);
-        factoryBean.setPlugins(new SkipInterceptor());
+        factoryBean.setPlugins(new Interceptor[]{new SkipInterceptor()});
+        factoryBean.setConfiguration(properties.getConfiguration());
         factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:VMapper.xml"));
         return factoryBean.getObject();
     }

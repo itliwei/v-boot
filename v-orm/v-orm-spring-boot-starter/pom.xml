@@ -9,7 +9,7 @@
     </parent>
     <groupId>io.github.itliwei.vboot.vorm</groupId>
     <artifactId>v-orm-spring-boot-starter</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.1-RELEASE</version>
     <name>v-orm-spring-boot-starter</name>
     <description>base mybatis my springboot starter </description>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>io.github.itliwei.vboot.vorm</groupId>
             <artifactId>v-orm-spring</artifactId>
-            <version>1.0.0-RELEASE</version>
+            <version>1.0.1-RELEASE</version>
         </dependency>
 
         <dependency>

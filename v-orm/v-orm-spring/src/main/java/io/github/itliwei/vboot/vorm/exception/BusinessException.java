@@ -1,6 +1,7 @@
 package io.github.itliwei.vboot.vorm.exception;
 
 import com.google.common.base.MoreObjects;
+import io.github.itliwei.vboot.vorm.response.ErrorCode;
 
 public class BusinessException extends RuntimeException {
     private String code;
