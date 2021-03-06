@@ -34,7 +34,7 @@ public class SqlBuilderUtil {
 
     static String SQL() {
         String sql = localSQL.get().toString();
-        logger.debug("CORM SQL ---> \n{}", sql);
+        logger.debug("VORM SQL ---> \n{}", sql);
         return sql;
     }
 

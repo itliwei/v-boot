@@ -269,6 +269,17 @@ public class VService {
     }
 
     /**
+     * 自定义条件删除
+     * @param clazz
+     * @param conditions
+     * @param <T>
+     * @return
+     */
+    public <T extends IdEntity> int delete(Class<T> clazz, Condition... conditions) {
+        return VOrm.switchM(mapper).delete((Class<IdEntity>) clazz).where(conditions).exec();
+    }
+
+    /**
      * 条件删除
      * @param clazz
      * @param queryModel
@@ -342,6 +353,21 @@ public class VService {
     /**
      * 某属性求和
      * @param sumProperty 属性名
+     * @param queryModel 条件 {@link Condition}
+     * @return {@link Number}
+     */
+    public <T extends IdEntity> Number sum(Class<T> clazz, String sumProperty, QueryModel queryModel) {
+        List conditions = this.getConditions(queryModel);
+        SumOpt opt = VOrm.switchM(mapper).select((Class<IdEntity>) clazz).sum(Field.of(sumProperty));
+        if (conditions != null) {
+            opt.where(conditions);
+        }
+        return opt.number();
+    }
+
+    /**
+     * 某属性求和
+     * @param sumProperty 属性名
      * @param conditions 条件 {@link Condition}
      * @return {@link Number}
      */
@@ -385,6 +411,17 @@ public class VService {
      * @return boolean
      */
     public <T extends IdEntity> boolean exist(Class<T> clazz, Condition... conditions) {
+        long count = count(clazz, conditions);
+        return count > 0;
+    }
+
+    /**
+     * 实体是否存在
+     * @param queryModel 条件 {@link Condition}
+     * @return boolean
+     */
+    public <T extends IdEntity> boolean exist(Class<T> clazz, QueryModel queryModel) {
+        List conditions = this.getConditions(queryModel);
         long count = count(clazz, conditions);
         return count > 0;
     }
