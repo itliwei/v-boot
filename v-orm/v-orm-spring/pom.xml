@@ -9,7 +9,7 @@
     </parent>
     <groupId>io.github.itliwei.vboot.vorm</groupId>
     <artifactId>v-orm-spring</artifactId>
-    <version>1.0.1-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
     <name>v-orm-spring</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -49,6 +49,11 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>swagger-bootstrap-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.itliwei.vboot.vorm</groupId>
+            <artifactId>v-orm-generator</artifactId>
+            <version>1.0.0-RELEASE</version>
         </dependency>
     </dependencies>
 
