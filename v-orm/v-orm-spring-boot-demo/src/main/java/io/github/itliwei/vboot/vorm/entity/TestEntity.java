@@ -17,8 +17,6 @@ import io.github.itliwei.vboot.vorm.orm.annotation.Table;
 import io.github.itliwei.vboot.vorm.orm.opt.Condition;
 import lombok.*;
 
-import static io.github.itliwei.vboot.vorm.entity.TestEntity.SIMPLE_DTO;
-import static io.github.itliwei.vboot.vorm.entity.TestEntity.SIMPLE_VO;
 
 
 /**
@@ -37,7 +35,7 @@ import static io.github.itliwei.vboot.vorm.entity.TestEntity.SIMPLE_VO;
 @ServiceClass(name = "TestService")
 @ControllerClass(path = "api/user",desc = "用户接口",name = "TestController")
 @ElementClass
-@ViewObject(groups = {SIMPLE_VO,SIMPLE_DTO})
+@ViewObject(groups = {TestEntity.SIMPLE_VO,TestEntity.SIMPLE_DTO})
 public class TestEntity extends IdEntity {
     protected static final String SIMPLE_VO = "TestVo";
     protected static final String SIMPLE_DTO = "TestDto";
