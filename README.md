@@ -311,14 +311,14 @@ v-boot是一个微服务框架，旨在为微服务盛行的今天提供一些�
     需要在SpringBoot启动类上加上：``io.github.itliwei.vboot.vorm.orm``因为这里存在基础的bean的自动适配。
     
 
-    @SpringBootApplication(scanBasePackages = {"io.github.itliwei.vboot.vorm.orm","io.github.itliwei.vboot.vorm"})
-    public class VOrmSpringBootDemoApplication {
-    
-        public static void main(String[] args) {
-            SpringApplication.run(VOrmSpringBootDemoApplication.class, args);
+        @SpringBootApplication(scanBasePackages = {"io.github.itliwei.vboot.vorm.orm","io.github.itliwei.vboot.vorm"})
+        public class VOrmSpringBootDemoApplication {
+        
+            public static void main(String[] args) {
+                SpringApplication.run(VOrmSpringBootDemoApplication.class, args);
+            }
+        
         }
-    
-    }
 
 6.  项目配置：和普通的mybatis配置没有任何不同
 
@@ -337,6 +337,7 @@ v-boot是一个微服务框架，旨在为微服务盛行的今天提供一些�
     
     查看swagger接口文档：ip:port/doc.html
     
+    ![avatar](img/20210307104132.jpg)
     
 #### 框架说明
 
