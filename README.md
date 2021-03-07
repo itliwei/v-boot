@@ -323,13 +323,13 @@ v-boot是一个微服务框架，旨在为微服务盛行的今天提供一些�
 6.  项目配置：和普通的mybatis配置没有任何不同
 
 
-    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-    spring.datasource.url=jdbc:mysql://localhost:3306/v-orm-demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
-    spring.datasource.username=root
-    spring.datasource.password=root
-    
-    #如果自动开启swagger的话，路径写到自己的项目名
-    swagger.docket.base-package=io.github.itliwei.vboot
+        spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+        spring.datasource.url=jdbc:mysql://localhost:3306/v-orm-demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+        spring.datasource.username=root
+        spring.datasource.password=root
+        
+        #如果自动开启swagger的话，路径写到自己的项目名
+        swagger.docket.base-package=io.github.itliwei.vboot
 
     
 
