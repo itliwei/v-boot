@@ -18,7 +18,8 @@
 	<modules>
 		<module>v-orm</module>
 		<module>v-tool</module>
-	</modules>
+        <module>v-jmh</module>
+    </modules>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -28,6 +29,7 @@
 		<fastjson.version>1.2.62</fastjson.version>
 		<apache.common.version>3.9</apache.common.version>
 		<commons-beanutils>1.9.4</commons-beanutils>
+		<jmh.version>1.35</jmh.version>
 	</properties>
 
 	<dependencyManagement>
@@ -165,6 +167,19 @@
                 <artifactId>gson</artifactId>
                 <version>2.8.6</version>
             </dependency>
+
+			<dependency>
+				<groupId>org.openjdk.jmh</groupId>
+				<artifactId>jmh-core</artifactId>
+				<version>${jmh.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjdk.jmh</groupId>
+				<artifactId>jmh-generator-annprocess</artifactId>
+				<version>${jmh.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
 
         </dependencies>
 	</dependencyManagement>
